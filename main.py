@@ -6,7 +6,7 @@ import random
 class Monyhall(argparse.Action):
     def __init__(self, args, **kwargs):
         number = int(args[1])
-        switch = bool(args[2])
+        switch = True if args[2].lower() == "true" else False
         win = 0
         loose = 0
 
@@ -25,7 +25,7 @@ class Monyhall(argparse.Action):
 
             if (switch):
                 pick = doors[doors.index(pick)-1]
-
+                
             if pick == correctDoor:
                 win += 1
             else:
