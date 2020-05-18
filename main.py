@@ -25,7 +25,7 @@ class Monyhall(argparse.Action):
 
             if (switch):
                 pick = doors[doors.index(pick)-1]
-                
+                    
             if pick == correctDoor:
                 win += 1
             else:
